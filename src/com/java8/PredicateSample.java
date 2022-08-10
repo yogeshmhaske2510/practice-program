@@ -34,5 +34,7 @@ public class PredicateSample {
          * */
         List<String> filterList3 = lists.stream().filter(s-> lengthCheck.negate().test(s)).collect(Collectors.toList());
         System.out.println(filterList3);
+
+
     }
 }
