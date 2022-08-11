@@ -3,6 +3,7 @@ package com.java8;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -35,6 +36,9 @@ public class PredicateSample {
         List<String> filterList3 = lists.stream().filter(s-> lengthCheck.negate().test(s)).collect(Collectors.toList());
         System.out.println(filterList3);
 
+        BiPredicate<Integer, String> biPredicate = (x,y)-> x > 10 && y.length() >5;
+        System.out.println("BiPredicate example : "+biPredicate.test(11, "Infosys"));
+        System.out.println("BiPredicate example : "+biPredicate.test(9, "Info"));
 
     }
 }

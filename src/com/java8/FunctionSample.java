@@ -3,6 +3,7 @@ package com.java8;
 import com.java8.pojo.Employee;
 
 import java.util.List;
+import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -20,6 +21,9 @@ public class FunctionSample {
 
         System.out.println("using andThen "+doubleIt.andThen(cubeIt).apply(2));
         System.out.println("using compose "+doubleIt.compose(cubeIt).apply(2));
+
+        BiFunction<Integer, Integer, Integer> biFunction = (x,y) -> x*y;
+        System.out.println("BiFunction example : "+biFunction.apply(2,5));
 
     }
 }
